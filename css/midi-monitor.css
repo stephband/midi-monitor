@@ -1,0 +1,122 @@
+/* .block */
+
+.head_block,
+.body_block {
+	width: 25rem;
+	padding-right: 1rem;
+}
+
+.head_block .console_table {
+	border-bottom: 1px solid #999999;
+}
+
+.body_block {
+	height: 26.25rem;
+	height: 31.25rem;
+	overflow: auto;
+	margin-bottom: 1.5rem;
+}
+
+.body_block .console_table {
+	/*background-color: rgba(15, 15, 15, 0.04);*/
+
+}
+
+
+/* table */
+
+.console_table {
+	margin: 0;
+	width: 24rem;
+}
+
+.console_table > tbody {
+	overflow: auto;
+}
+
+.console_table th {
+	font-size: 0.75rem;
+	font-weight: normal;
+}
+
+.console_table td {
+	padding-top: 0.0625rem;
+	padding-bottom: 0.0625rem;
+	line-height: 1.125rem;
+	font-family: 'Andale Mono', monospace;
+	font-size: 0.8125rem;
+	text-align: right;
+}
+
+.console_table td,
+.console_table th {
+	text-align: right;
+}
+
+.console_table td {
+	font-family: 'Andale Mono', monospace;
+}
+
+.console_table .time_td,
+.console_table .time_th {
+	width: 6rem;
+	text-align: left;
+}
+
+.console_table .time_td {
+	font-size: 0.625rem;
+}
+
+.console_table .type_td,
+.console_table .type_th {
+	width: 6rem;
+	text-align: left;
+}
+
+.console_table .type_td {
+	text-transform: uppercase;
+}
+
+.console_table .chan_td,
+.console_table .chan_th {
+	width: 3rem;
+}
+
+.console_table .num_td,
+.console_table .num_th {
+	width: 3rem;
+}
+
+.console_table .note_td,
+.console_table .note_th {
+	width: 3rem;
+}
+
+.console_table .val_td,
+.console_table .val_th {
+	width: 3rem;
+}
+
+.console_table tr.on .type_td {
+	position: relative;
+}
+
+.console_table tr.on .type_td:after {
+	content: ' ';
+	position: absolute;
+	height: 0.625rem;
+	width: 0.625rem;
+	top: 0.3125rem;
+	right: 0;
+	background-color: #80BDDB;
+	border-radius: 0.5rem;
+}
+
+.console_table > tbody > tr:nth-child(odd) > td {
+	background-color: rgba(15,15,15,0.06);
+}
+
+.console_table > thead > tr > td,
+.console_table > tbody > tr > td {
+	background-color: rgba(240,240,240,0.2);
+}
