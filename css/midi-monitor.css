@@ -1,9 +1,19 @@
+.midi-monitor {
+	max-width: 24rem;
+	background-color: rgb(245,245,245);
+}
+
 /* .block */
 
 .head_block,
 .body_block {
-	width: 25rem;
+	/* Move the scrollbar over to the right of the container's right edge. */
+	margin-right: -1rem;
 	padding-right: 1rem;
+}
+
+.head_block {
+	background-color: white;
 }
 
 .head_block .console_table {
@@ -11,7 +21,6 @@
 }
 
 .body_block {
-	height: 26.25rem;
 	height: 31.25rem;
 	overflow: auto;
 	margin-bottom: 1.5rem;
@@ -19,7 +28,6 @@
 
 .body_block .console_table {
 	/*background-color: rgba(15, 15, 15, 0.04);*/
-
 }
 
 
@@ -27,7 +35,6 @@
 
 .console_table {
 	margin: 0;
-	width: 24rem;
 }
 
 .console_table > tbody {
@@ -113,10 +120,10 @@
 }
 
 .console_table > tbody > tr:nth-child(odd) > td {
-	background-color: rgba(15,15,15,0.06);
+	background-color: rgb(240,240,240);
 }
 
 .console_table > thead > tr > td,
 .console_table > tbody > tr > td {
-	background-color: rgba(240,240,240,0.2);
+	background-color: rgb(250,250,250);
 }
