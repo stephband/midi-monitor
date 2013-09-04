@@ -43,20 +43,22 @@ var app_console = new App('#app_console');
 			MIDI()
 			.then(function(midi) {
 				midi.on(function(e) {
-					//console.log(type, chan, num, val, time);
-	console.log(e);
+
+// For some reason, Chrome is dropping the MIDI connection unless we
+// explicitly log midi event objects.
+console.log(e);
+
 					// Populate the table cells
 					tdNodes[0].textContent = msToTime(e.receivedTime);
-					tdNodes[1].textContent = e.message;
-					tdNodes[2].textContent = e.channel;
-					tdNodes[3].textContent = e.data1;
-	
-					tdNodes[4].textContent = (e.message === 'noteon' || e.message === 'noteoff') ?
+					tdNodes[1].textContent = e.target.name;
+					tdNodes[2].textContent = e.message;
+					tdNodes[3].textContent = e.channel;
+					tdNodes[4].textContent = e.data1;
+					tdNodes[5].textContent = (e.message === 'noteon' || e.message === 'noteoff') ?
 						MIDI.numberToNote(e.data1) + MIDI.numberToOctave(e.data1) :
 						'' ;
-					
-					tdNodes[5].textContent = e.data2;
-	
+					tdNodes[6].textContent = e.data2;
+
 					var trNode = template.cloneNode(true);
 	
 					// Put the new node in the table

@@ -1,5 +1,5 @@
 .midi-monitor {
-	max-width: 24rem;
+	max-width: 28.5rem;
 	background-color: rgb(245,245,245);
 }
 
@@ -53,6 +53,8 @@
 	font-family: 'Andale Mono', monospace;
 	font-size: 0.8125rem;
 	text-align: right;
+	text-transform: uppercase;
+	white-space: nowrap;
 }
 
 .console_table td,
@@ -70,7 +72,14 @@
 	text-align: left;
 }
 
-.console_table .time_td {
+.console_table .port_td,
+.console_table .port_th {
+	width: 4.5rem;
+	text-align: left;
+}
+
+.console_table .time_td,
+.console_table .port_td {
 	font-size: 0.625rem;
 }
 
