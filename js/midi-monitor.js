@@ -3,7 +3,7 @@ var app_console = new App('#app_console');
 (function(jQuery, app, undefined){
 	var debug = true; //window.debug;
 
-	var eventMax = 400;
+	var eventMax = 200;
 
 	function digits2(n) {
 		return n < 10 ? '0' + n : n ;
